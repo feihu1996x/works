@@ -21,15 +21,12 @@ class WorksView(View):
         for works in all_works:
             results['data'].append({
                 'id': works.id,
-                'cover': '/media/'+str(works.cover),
+                'cover': 'http://127.0.0.1:8000/media/'+str(works.cover),
                 'title': works.title,
                 'desc': works.desc,
                 'source': works.source
             })
 
         response = HttpResponse(json.dumps(results), content_type='application/json')
-
-        # 允许跨域请求
-        response['Access-Control-Allow-Origin'] = '*'
 
         return response
