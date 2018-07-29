@@ -19,11 +19,11 @@ var app = new Vue({
 
                 },
                 header: {
-                    'Access-Control-Allow-Origin': ''
+                    
                 }
             }).then(function(res){
                 _this.works = res;
-                console.log(_this.works);
+                console.log(res);
             }, function(error){
                 console.log(error);
             });
