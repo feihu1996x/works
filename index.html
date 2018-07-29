@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="static/css/index.css">
     <title>works</title>
 </head>
-<body onselectstart="return false;  //防止页面元素被选中">
+<body onselectstart="return false;  // 防止页面元素被选中">
     <div class="wrap" id="app">  <!-- 外层容器 -->
-        <div class="photo photo-center photo-front" onclick="turn(this)"> <!-- 海报：负责平移和旋转 -->
+        <div class="photo photo-center" @click='turn' v-bind:class='[is_photo_front?"photo-front":"photo-back"]'> <!-- 海报：负责平移和旋转 -->
             <div class="photo-wrap">  <!-- 海报内框：负责翻转 -->
                 <div class="side side-front">  <!-- 海报正面 -->
                     <p class="image">  <!-- 海报图片 -->
@@ -28,6 +28,8 @@
             </div>
         </div>
     </div>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/vue-resource@1.5.1.js"></script>
     <script src="static/js/index.js"></script>
 </body>
 </html>

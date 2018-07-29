@@ -23,4 +23,9 @@ class WorksView(View):
                 'source': works.source
             })
 
-        return HttpResponse(json.dumps(results), content_type='application/json')
+        response = HttpResponse(json.dumps(results), content_type='application/json')
+
+        # 允许跨域请求
+        response['Access-Control-Allow-Origin'] = '*'
+
+        return response
