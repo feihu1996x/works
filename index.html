@@ -9,19 +9,25 @@
     <title>works</title>
 </head>
 <body onselectstart="return false;  //防止页面元素被选中">
-    <div class="wrap">
-        <div class="photo"> <!-- 海报 -->
-            <div class="side side-front">  <!-- 海报正面 -->
-                <p class="image">  <!-- 海报图片 -->
-                </p>
-                <p class="caption">  <!-- 海报标题 -->
-                </p>
-            </div>
-            <div class="side side-back">  <!-- 海报反面 -->
-                <p class="desc">  <!-- 海报描述 -->
-                </p>
+    <div class="wrap" id="app">  <!-- 外层容器 -->
+        <div class="photo photo-center photo-front" onclick="turn(this)"> <!-- 海报：负责平移和旋转 -->
+            <div class="photo-wrap">  <!-- 海报内框：负责翻转 -->
+                <div class="side side-front">  <!-- 海报正面 -->
+                    <p class="image">  <!-- 海报图片 -->
+                        <img src="https://img1.doubanio.com/view/photo/l/public/p2529206747.webp" alt="西虹市首富">
+                    </p>
+                    <p class="caption">  <!-- 海报标题 -->
+                        西虹市首富
+                    </p>
+                </div>
+                <div class="side side-back">  <!-- 海报反面 -->
+                    <p class="desc">  <!-- 海报描述 -->
+                        描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
