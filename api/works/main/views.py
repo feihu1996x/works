@@ -12,10 +12,14 @@ class WorksView(View):
     作品集请求处理类
     """
     def get(self, request):
-        results = []
+        results = {
+            'status': 0,
+            'data': [],
+            'msg': 'success'
+        }
         all_works = Works.objects.filter()
         for works in all_works:
-            results.append({
+            results['data'].append({
                 'id': works.id,
                 'cover': '/media/'+str(works.cover),
                 'title': works.title,
