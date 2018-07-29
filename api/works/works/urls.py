@@ -29,3 +29,8 @@ urlpatterns = [
     # 上传文件访问url配置
     url(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
+
+if not settings.DEBUG:  # 生产环境
+    urlpatterns.append(url(r'static/(?P<path>.*)$', serve,  {'document_root': settings.STATIC_ROOT}))
+    # handler404 = 'users.views.page_not_found'  # 全局404页面配置
+    # handler500 = 'users.views.page_error'  # 全局500页面配置
