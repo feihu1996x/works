@@ -12,6 +12,10 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
 }
+a:hover, a:visited, a:link, a:active {
+    color: inherit;
+}
+
 /*界面*/
 .wrap{
     width:100%;
@@ -67,6 +71,7 @@ body{
     color: #666666;
     font-size: 14px;
     line-height: 1.5em;
+    text-indent: 2em;
 }
 /*当前选中海报样式*/
 .photo_center{
@@ -163,4 +168,25 @@ body{
 .photo_back .photo-wrap{
     -webkit-transform: translate(260px ,0px) rotateY(180deg);
     -moz-transform: translate(260px ,0px) rotateY(180deg);
+}
+
+.ellipsis-10
+{
+    display: -webkit-box;
+    overflow: hidden;
+
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    cursor: pointer;
 }

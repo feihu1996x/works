@@ -12,21 +12,22 @@ class WorksView(View):
     作品集请求处理类
     """
     def get(self, request):
+        callback = request.GET.get('callback', '')  # 解决跨域问题
         results = {
             'status': 0,
             'data': [],
             'msg': 'success'
         }
-        all_works = Works.objects.filter()
+        all_works = Works.objects.all()
         for works in all_works:
             results['data'].append({
                 'id': works.id,
-                'cover': 'http://127.0.0.1:8000/media/'+str(works.cover),
+                'cover': '/media/'+str(works.cover),
                 'title': works.title,
                 'desc': works.desc,
                 'source': works.source
             })
 
-        response = HttpResponse(json.dumps(results), content_type='application/json')
+        response = HttpResponse('{0}({1})'.format(callback, json.dumps(results)), content_type='application/json')
 
         return response

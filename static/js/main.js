@@ -1,8 +1,3 @@
-/**
- * Created by anthony on 2017/8/21.
- */
-
-
 //   1.翻面控制
 function turn (elem) {
     var cls = elem.className;
