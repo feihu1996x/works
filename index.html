@@ -11,7 +11,7 @@
 <div class="wrap" id="wrap">
     <!--.photo负责位置的居中和旋转-->
     <div v-for="works in all_works" class="photo photo_front" onclick="turn(this)"
-    :id="'photo_'+(works.id - 1)">
+    :id="'photo_'+works.id">
         <!--.photo-wrap 负责海报的正面与反面的翻转-->
         <div class="photo-wrap">
             <!--.side-front 海报正面-->
@@ -32,7 +32,7 @@
     </div>
 
     <div class="nav">
-        <span v-for="works in all_works" :id="'nav_'+(works.id - 1)" :onclick="turn_nav_attr.replace(/\d{1,2}/, (works.id - 1))" class="i">&nbsp;</span>
+        <span v-for="works in all_works" :id="'nav_'+works.id" :onclick="turn_nav_attr.replace(/\d{1,2}/, works.id)" class="i">&nbsp;</span>
     </div>
 </div>
 <div class="footer">
