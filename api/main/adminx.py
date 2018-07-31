@@ -32,11 +32,12 @@ class GlobalSettings:
 
 class WorksAdmin:
     # 自定义列表页显示字段
-    list_display = ['cover', 'title', 'desc', 'source', 'add_time']
+    list_display = ['cover', 'title', 'desc', 'source', 'add_time', 'index']
     # 自定义检索字段
-    search_fields = ['cover', 'title', 'desc', 'source']
+    search_fields = ['cover', 'title', 'desc', 'source', 'index']
     # 自定义筛选字段
-    list_filter = ['cover', 'title', 'desc', 'source', 'add_time']
+    list_filter = ['cover', 'title', 'desc', 'source', 'add_time', 'index']
+    list_editable = ['index']
     model_icon = 'fa fa-file-powerpoint-o'
 
 

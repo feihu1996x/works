@@ -10,6 +10,7 @@ class Works(models.Model):
     desc = models.TextField(verbose_name='描述')
     source = models.URLField(max_length=100, verbose_name='网址')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
+    index = models.IntegerField(default=0, verbose_name='索引')
 
     class Meta:
         verbose_name = '作品'

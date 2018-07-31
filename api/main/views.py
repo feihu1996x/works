@@ -18,10 +18,10 @@ class WorksView(View):
             'data': [],
             'msg': 'success'
         }
-        all_works = Works.objects.all()
+        all_works = Works.objects.all().order_by('index')
         for works in all_works:
             results['data'].append({
-                'id': works.id,
+                'id': works.index,
                 'cover': '/media/'+str(works.cover),
                 'title': works.title,
                 'desc': works.desc,
