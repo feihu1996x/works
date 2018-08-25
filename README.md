@@ -11,6 +11,7 @@
 ```bash
 
 # 安装依赖
+yum install mysql-devel gcc gcc-devel python-devel -y
 pip install -r requirements.txt
 
 # 导入数据库
