@@ -120,7 +120,7 @@ USE_TZ = False
 
 # url前缀
 URL_PREFIX=""
-# URL_PREFIX="/works"
+# URL_PREFIX=r"/works"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -132,6 +132,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
 if DEBUG:  # 开发环境
     STATICFILES_DIRS = (

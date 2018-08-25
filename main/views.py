@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from main.models import Works
+from works.settings import URL_PREFIX
 
 
 # Create your views here.
@@ -36,7 +37,7 @@ class WorksView(View):
         for works in all_works:
             results['data'].append({
                 'id': works.index,
-                'cover': '/media/'+str(works.cover),
+                'cover': URL_PREFIX+'/media/'+str(works.cover),
                 'title': works.title,
                 'desc': works.desc,
                 'source': works.source
