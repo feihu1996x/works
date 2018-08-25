@@ -23,15 +23,23 @@ from main.views import WorksView
 from main.views import IndexView
 
 urlpatterns = [
-    path(settings.URL_PREFIX + 'admin/', xadmin.site.urls),
-    path(settings.URL_PREFIX, IndexView.as_view(), name='index'),
-    path(settings.URL_PREFIX + 'works/', WorksView.as_view(), name='get_works'),
-    # 上传文件访问url配置
-    url(settings.URL_PREFIX + r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
 if not settings.DEBUG:  # 生产环境
     urlpatterns.append(url(settings.URL_PREFIX + r'static/(?P<path>.*)$', serve,  {'document_root': settings.STATIC_ROOT}))
     # handler404 = 'users.views.page_not_found'  # 全局404页面配置
     # handler500 = 'users.views.page_error'  # 全局500页面配置
+
+if settings.URL_PREFIX:  # 统一添加url前缀
+    urlpatterns.append(path(settings.URL_PREFIX.lstrip("/") + '/admin/', xadmin.site.urls))
+    urlpatterns.append(path(settings.URL_PREFIX.lstrip("/")+"/", IndexView.as_view(), name='index'))
+    urlpatterns.append(path(settings.URL_PREFIX.lstrip("/") + '/works/', WorksView.as_view(), name='get_works'))
+    # 上传文件访问url配置
+    urlpatterns.append(url(settings.URL_PREFIX.lstrip("/") + r'/media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}))
+else:
+    urlpatterns.append(path(settings.URL_PREFIX + 'admin/', xadmin.site.urls))
+    urlpatterns.append(path(settings.URL_PREFIX, IndexView.as_view(), name='index'))
+    urlpatterns.append(path(settings.URL_PREFIX + 'works/', WorksView.as_view(), name='get_works'))
+    # 上传文件访问url配置
+    urlpatterns.append(url(settings.URL_PREFIX + r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}))
 
