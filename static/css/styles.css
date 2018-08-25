@@ -69,9 +69,9 @@ a:hover, a:visited, a:link, a:active {
 
 .photo .side-back .desc{
     color: #666666;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5em;
-    text-indent: 2em;
+    /*text-indent: 2em;*/
 }
 /*当前选中海报样式*/
 .photo_center{
@@ -170,7 +170,7 @@ a:hover, a:visited, a:link, a:active {
     -moz-transform: translate(260px ,0px) rotateY(180deg);
 }
 
-.ellipsis-10
+.ellipsis-15
 {
     display: -webkit-box;
     overflow: hidden;
@@ -179,7 +179,7 @@ a:hover, a:visited, a:link, a:active {
     text-overflow: ellipsis;
     word-wrap: break-word;
 
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 15;
     -webkit-box-orient: vertical;
 }
 
