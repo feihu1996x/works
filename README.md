@@ -6,6 +6,17 @@
 
 ## 技术栈
 
+HTML
+CSS(3)
+JavaScript
+Vue.js
+Django(Web 后端服务)
+Xadmin(后台管理系统)
+MySQL
+Docker(容器端口映射)
+Supervisor(进程管理)
+Nginx(反向代理)
+
 ## Build and Setup
 
 ```bash
