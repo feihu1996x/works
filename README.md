@@ -16,6 +16,7 @@ MySQL
 Docker(容器端口映射)
 Supervisor(进程管理)
 Nginx(反向代理)
+Gunicorn(WSGI)
 
 ## Build and Setup
 
