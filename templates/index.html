@@ -54,7 +54,9 @@
         mounted: function(){
             // 请求接口数据
             this.get_all_works();
-            // 排序海报 
+        },
+        updated: function(){
+            // 排序海报
             rsort(random([0,this.all_works.length]));
         },
         methods: {
