@@ -43,6 +43,7 @@
 -->
 <script src="{% static 'js/vue.min.js' %}"></script>
 <script src="{% static 'js/vue-resource.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 <script>
     var app = new Vue({
         el: '#wrap',
@@ -51,7 +52,10 @@
             turn_nav_attr: "turn(g('#photo_0'))"
         },
         mounted: function(){
+            // 请求接口数据
             this.get_all_works();
+            // 排序海报 
+            rsort(random([0,this.all_works.length]));
         },
         methods: {
             get_all_works: function(){
@@ -67,6 +71,5 @@
         }
     });
 </script>
-<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
