@@ -34,6 +34,3 @@ python3 begin.py
 
 ```
 
-## Website
-
-[http://dev.feihu1996.cn/hpshsystem/](http://dev.feihu1996.cn/hpshsystem/ "hpshSystem")
