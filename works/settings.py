@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'works',
         'USER': 'test',
         'PASSWORD': '*3!0CcEf',
-        'HOST': '192.168.0.100'
+        'HOST': '127.0.0.1'
     }
 }
 
