@@ -6,8 +6,7 @@
 
 - HTML/CSS/JavaScript
 - Vue.js
-- Python/Django
-- Xadmin
+- Python/Django/Xadmin
 - MySQL
 - Docker
 - Supervisor
@@ -30,4 +29,4 @@ python3 begin.py
 
 ## Demo Link
 
-[http://dev.feihu1996.cn/hpshsystem/](http://dev.feihu1996.cn/hpshsystem/ "hpshSystem")
+[http://dev.feihu1996.cn/works/](http://dev.feihu1996.cn/works/ "works")
