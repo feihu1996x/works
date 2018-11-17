@@ -5,7 +5,7 @@
 ## Tech Stack
 
 - HTML/CSS/JavaScript
-- Vue.js
+- Vue
 - Python/Django/Xadmin
 - MySQL
 - Docker
